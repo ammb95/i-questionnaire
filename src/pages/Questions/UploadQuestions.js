@@ -11,26 +11,30 @@ export default function UploadQuestions() {
       const lines = this.result.split("\n");
       const subjectName = file.name.slice(0, -4);
 
-      const {
-        data: { subject },
-      } = await axios.post("http://localhost:3001/subjects", {
-        title: subjectName,
-      });
-
-      const questions = lines.map((line, index) => ({
-        number: index + 1,
-        body: line,
-        subject: subject._id,
-      }));
-
       try {
-        await Promise.all(
-          questions.forEach(async (question) => {
-            await axios.post("http://localhost:3001/questions", question);
-          })
-        );
+        const {
+          data: { subject },
+        } = await axios.post("http://localhost:3001/subjects", {
+          title: subjectName,
+        });
+
+        const questions = lines.map((line, index) => ({
+          number: index + 1,
+          body: line,
+          subject: subject._id,
+        }));
+
+        try {
+          await Promise.all(
+            questions.forEach(async (question) => {
+              await axios.post("http://localhost:3001/questions", question);
+            })
+          );
+        } catch (error) {
+          console.log(`error`, error);
+        }
       } catch (error) {
-        console.log(`error`, error);
+        console.log(error);
       }
     };
 
