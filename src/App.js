@@ -1,7 +1,7 @@
 import { Container } from "reactstrap";
 import Header from "./components/Header";
 import Router from "./router";
-import LoadingWrapper from "./contexts/LoadingWrapper";
+import LoadingWrapper from "./contexts/LoadingContext/LoadingWrapper";
 
 // import "./styles/index.scss";
 import "./styles/index.css";

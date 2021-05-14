@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Loading from "../components/Loading";
-import LoadingContext from "./LoadingContext";
+import LoadingContext from "./index";
 
 export default function LoadingWrapper({ initialValue, children }) {
   const [loading, setLoading] = useState(initialValue || true);
