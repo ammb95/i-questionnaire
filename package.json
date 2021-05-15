@@ -16,19 +16,22 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "date-fns": "^2.21.3",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "formik": "^2.2.6",
+    "path": "^0.12.7",
+    "postcss": "^7.0.35",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "web-vitals": "^1.0.1",
-    "yup": "^0.32.9",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+    "yup": "^0.32.9"
   },
   "scripts": {
     "heroku-postbuild": "yarn",
-    "start": "craco start",
+    "start": "node server.js",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"
