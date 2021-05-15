@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "14.17.0"
+    "npm": "6.14.13",
+    "node": "14.17.0",
+    "yarn": "1.22.5"
   },
   "dependencies": {
     "@craco/craco": "^6.1.2",
@@ -23,6 +25,7 @@
     "yup": "^0.32.9"
   },
   "scripts": {
+    "heroku-postbuild": "yarn",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
