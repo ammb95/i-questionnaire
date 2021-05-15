@@ -4,10 +4,48 @@
 
 :root {
   --header-height: 70px;
+  --footer-height: 50px;
+  --scrollbar-width: 10px;
+}
+
+body {
+  @apply bg-green-800;
+  /* min-width: calc(100vw - var(--scrollbar-width)); */
+  min-width: 100%;
+  min-height: 100%;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+#root {
+  @apply w-full;
+  @apply h-full;
+}
+
+.page-content {
+  @apply h-full;
+  @apply w-full;
+
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.container {
+  min-width: 100%;
+  @apply h-full;
+  @apply w-full;
+  @apply p-8;
+  @apply px-8;
+  @apply md:py-8;
+  @apply md:px-24;
 }
 
 header {
   height: var(--header-height);
+}
+
+footer {
+  height: var(--footer-height);
 }
 
 button {
@@ -19,7 +57,7 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: var(--scrollbar-width);
 }
 
 /* Track */

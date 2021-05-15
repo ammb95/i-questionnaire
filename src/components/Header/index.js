@@ -7,7 +7,7 @@ export default function Header() {
       <Link to="/" className="mr-4">
         <i className="las la-home"></i>
       </Link>
-      <h4>iQuestionaire</h4>
+      <h4>iQuestionnaire</h4>
     </header>
   );
 }

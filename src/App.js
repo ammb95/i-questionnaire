@@ -5,18 +5,20 @@ import LoadingWrapper from "./contexts/LoadingContext/LoadingWrapper";
 
 // import "./styles/index.scss";
 import "./styles/index.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Header />
       <div className="page-content">
-        <Container className="p-8 px-8 md:py-8 md:px-24">
+        <Container>
           <LoadingWrapper>
             <Router />
           </LoadingWrapper>
         </Container>
       </div>
+      <Footer />
     </>
   );
 }

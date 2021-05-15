@@ -30,7 +30,8 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "craco start",
+    "webstart": "node server.js",
     "build": "craco build",
     "heroku-postbuild": "craco build",
     "test": "craco test",
