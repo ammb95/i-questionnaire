@@ -8,31 +8,46 @@
   --scrollbar-width: 10px;
 }
 
+.h-fc {
+  height: fit-content;
+}
+
+html {
+  min-width: fit-content;
+  min-height: fit-content;
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: overlay;
+}
+
 body {
   @apply bg-green-800;
   /* min-width: calc(100vw - var(--scrollbar-width)); */
   min-width: 100%;
-  min-height: 100%;
-  width: fit-content;
-  height: fit-content;
+  min-height: fit-content;
+  width: 100%;
+  /* height: 100%; */
   position: relative;
 }
 
 #root {
-  @apply w-full;
+  /* @apply w-full; */
   @apply h-full;
+  min-height: fit-content;
 }
 
 .page-content {
-  @apply h-full;
+  /* @apply h-full; */
   @apply w-full;
-
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  /* padding-bottom: 2 * var(--footer-height); */
+  min-height: fit-content;
+  /* height: calc(100vh - var(--header-height) - var(--footer-height)); */
 }
 
 .container {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
   min-width: 100%;
-  @apply h-full;
   @apply w-full;
   @apply p-8;
   @apply px-8;
@@ -45,7 +60,10 @@ header {
 }
 
 footer {
+  width: 100%;
   height: var(--footer-height);
+  /* position: absolute;
+  bottom: 0px; */
 }
 
 button {

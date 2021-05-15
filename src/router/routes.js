@@ -10,7 +10,7 @@ const ROUTES = [
     },
   },
   {
-    path: "/questionaires/:id",
+    path: "/questionnaires/:id",
     Page: Questionaire,
     props: {},
   },
