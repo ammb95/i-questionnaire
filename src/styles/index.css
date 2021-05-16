@@ -19,6 +19,7 @@ textarea {
 
 .MuiFilledInput-underline:before,
 .MuiFilledInput-underline:after {
+  border-bottom: 2px solid white !important;
   border-bottom-color: white;
 }
 
