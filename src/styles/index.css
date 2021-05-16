@@ -8,6 +8,24 @@
   --scrollbar-width: 10px;
 }
 
+::placeholder {
+  color: white !important;
+}
+
+input,
+textarea {
+  color: white !important;
+}
+
+.MuiFilledInput-underline:before,
+.MuiFilledInput-underline:after {
+  border-bottom-color: white;
+}
+
+.MuiFormHelperText-contained {
+  @apply mx-0 !important;
+}
+
 .h-fc {
   height: fit-content;
 }

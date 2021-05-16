@@ -11,7 +11,7 @@ export default function AnswerForm({ id, afterSubmit = () => {} }) {
   const [submitting, setSubmitting] = useState(false);
 
   const schema = Yup.object().shape({
-    author: Yup.string().required("Insert a name."),
+    author: Yup.string().required("Insert your name."),
     body: Yup.string().required("Insert your answer."),
   });
 
@@ -52,7 +52,8 @@ export default function AnswerForm({ id, afterSubmit = () => {} }) {
                   id={`author-${id}`}
                   key={`author-${id}`}
                   as={TextField}
-                  error={errors["author"]}
+                  error={!!errors["author"]}
+                  helperText={errors["author"]}
                   placeholder="Your name"
                   type="text"
                   className="w-1/2"
@@ -65,8 +66,9 @@ export default function AnswerForm({ id, afterSubmit = () => {} }) {
                   id={`body-${id}`}
                   key={`body-${id}`}
                   as={TextField}
-                  error={errors["body"]}
-                  placeholder="Your Answert"
+                  error={!!errors["body"]}
+                  helperText={errors["body"]}
+                  placeholder="Your Answer"
                   type="text-area"
                   className="w-full"
                   variant="filled"
@@ -77,7 +79,7 @@ export default function AnswerForm({ id, afterSubmit = () => {} }) {
               </div>
 
               <button
-                className="mt-8 p-2 bg-green-700 rounded-lg hover:bg-green-900 float-right outline-none text-white"
+                className="mt-8 p-2 bg-green-700 rounded-lg hover:bg-green-800 float-right outline-none text-white"
                 type="submit"
               >
                 SUBMIT

@@ -1,10 +1,10 @@
-import Questions from "../pages/Questions";
-import Questionaire from "../pages/Questions/Questionnaire";
+import Questionnaires from "../pages/Questionnaires";
+import Questionaire from "../pages/Questionnaire";
 
 const ROUTES = [
   {
     path: "/",
-    Page: Questions,
+    Page: Questionnaires,
     props: {
       default: true,
     },
