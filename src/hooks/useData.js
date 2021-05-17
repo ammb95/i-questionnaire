@@ -14,6 +14,7 @@ const useData = (dataName, url) => {
       const {
         data: { [dataName]: items },
       } = await api.get(url);
+
       setMyData(items);
       setLoading(false);
     } catch (err) {

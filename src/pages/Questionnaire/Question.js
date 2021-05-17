@@ -1,4 +1,5 @@
 import { IconButton } from "@material-ui/core";
+import { Link } from "@reach/router";
 import React from "react";
 import CollapsibleRow from "../../components/CollapsibleRow";
 import Answer from "./Answer";
@@ -22,7 +23,9 @@ export default function Question({
             className="p-4 font-semibold text-white cursor-default"
             {...props}
           >
-            {`${question?.number}. ${question?.body}`}
+            <Link to={`/question/${question._id}`}>
+              {`${question?.number}. ${question?.body}`}
+            </Link>
           </div>
         ),
         Toggler: ({ iconStyle, ...props }) => (
