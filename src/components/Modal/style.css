@@ -1,0 +1,56 @@
+#modal-root {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+
+  z-index: 1;
+
+  --modal-min-width: 35vw;
+  --modal-min-width-mobile: 60vw;
+  --modal-min-height: 60vh;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 75%;
+  z-index: 2;
+}
+
+#modal {
+  position: fixed;
+  top: calc(40% - 0.5 * var(--modal-min-height));
+  left: calc(50% - 0.5 * var(--modal-min-width));
+  z-index: 3;
+  background-color: white;
+  min-width: var(--modal-min-width);
+  min-height: var(--modal-min-height);
+}
+
+#modal *:not(#divisor) {
+  padding: 18px 24px;
+}
+
+@media only screen and (max-width: 992px) {
+  #modal {
+    min-width: var(--modal-min-width-mobile);
+    left: calc(50% - 0.5 * var(--modal-min-width-mobile));
+  }
+}
+
+#modal-title {
+  /* padding: 18px 24px; */
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+#divisor {
+  border: 0.5px solid lightgrey;
+}

@@ -61,6 +61,7 @@ body {
   @apply w-full;
   /* padding-bottom: 2 * var(--footer-height); */
   min-height: fit-content;
+  max-width: 100vw;
   /* height: calc(100vh - var(--header-height) - var(--footer-height)); */
 }
 
