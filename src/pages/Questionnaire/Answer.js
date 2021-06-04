@@ -53,7 +53,9 @@ export default function Answer({
           </div>
         </div>
       </div>
-      <div className="text-sm whitespace-pre-line">{answer.body}</div>
+      <div className="text-sm whitespace-pre-line break-words">
+        {answer.body}
+      </div>
       <div className="w-full mt-4 flex justify-end items-center">
         <div className="mr-2">{answer.likes}</div>
         <IconButton
