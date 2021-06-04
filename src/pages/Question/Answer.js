@@ -62,7 +62,7 @@ export default function Answer({ _id, author, body, created_at, likes }) {
         Content: () => (
           <div className="px-8 pt-4 pb-8 bg-green-700 text-white">
             <div className="text-right mb-8 italic">{createdAt}</div>
-            <div className="text-sm text-justify whitespace-pre-line">
+            <div className="text-sm text-justify whitespace-pre-line break-words">
               {body}
             </div>
           </div>
